@@ -11,7 +11,7 @@ ogImage: https://res.cloudinary.com/noezectz/v1663745737/astro-paper/astropaper-
 description: Directory import '...' is not supported resolving ES modules imported from ...
 ---
 
-Since the end of 2023 Node V20 [will become](https://nodejs.dev/en/about/releases/) in Active LTS. After that you may feel temptated to upgrade for the new major release of runtime. And there're chances you will encounter such error
+Since the end of 2023 Node V20 [will become](https://nodejs.dev/en/about/releases/) in Active LTS. After that you may feel tempted to upgrade for the new major release of runtime. And there're chances you will encounter such error
 
 ```
 Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '...' is not supported resolving ES modules imported from ...
@@ -29,7 +29,7 @@ Take a look at this pull request. `--experimental-specifier-resolution` and `--e
 
 The reason behind it – users can replicate the behavior of these flags on their own.
 
-But let's first figure out more details on occuring error.
+But let's first figure out more details on occurring error.
 
 ## What Does This Error Even Mean?
 
@@ -49,7 +49,7 @@ But it wouldn't help us if the problem code were in library. Then meet the loade
 
 ## ECMAScript Modules Loaders
 
-According to the loader's Node.js team the loaders are needed to implement usecases that [were not initially in ES Modules](https://github.com/nodejs/loaders#history). Looks like they're talking about our case!
+According to the loader's Node.js team the loaders are needed to implement use cases that [were not initially in ES Modules](https://github.com/nodejs/loaders#history). Looks like they're talking about our case!
 
 How to accomplish the desired behavior:
 
@@ -61,13 +61,13 @@ How to accomplish the desired behavior:
 6. Add flag to node like that: `node --loader=./loader.js`
 7. Don't forget to include this flag to all places where `node` is calling your application (even in Dockerfile)
 
-But why would we copy the source code and haven't installed an appopriate library? First of all, the linked repo doesn't come with any npm package. Some guy [have uploaded](https://www.npmjs.com/package/commonjs-extension-resolution-loader) it to npm anyways, but I don't wanto to bring some random dependency into my code. You might have a different opinion though 🤷‍♂️
+But why would we copy the source code and haven't installed an appropriate library? First of all, the linked repo doesn't come with any npm package. Some guy [have uploaded](https://www.npmjs.com/package/commonjs-extension-resolution-loader) it to npm anyways, but I don't want to to bring some random dependency into my code. You might have a different opinion though 🤷‍♂️
 
 ## Bonus: Working With Such Libraries From TypeScript
 
 If you would like to work with library that is using such loader or previously used deprecated flag you'd need to make some tweaks to your configs
 
-Let's start with `tsconfig.json` (most unrelated settings are omited):
+Let's start with `tsconfig.json` (most unrelated settings are omitted):
 
 ```json
 {
