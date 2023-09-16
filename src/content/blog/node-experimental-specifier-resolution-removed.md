@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - docs
-ogImage: https://res.cloudinary.com/noezectz/v1663745737/astro-paper/astropaper-x-forestry-og_kqfwp0.png
+ogImage: /assets/node-experimental-specifier-resolution-removed.png
 description: Directory import '...' is not supported resolving ES modules imported from ...
 ---
 
