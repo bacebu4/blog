@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://bacebu4.com/",
   author: "Vasilii Krasikov",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  desc: "Articles on TypeScript, Software Architecture and Design",
   title: "bacebu4",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
