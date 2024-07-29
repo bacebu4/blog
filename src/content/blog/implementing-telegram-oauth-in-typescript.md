@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - guides
-ogImage: /assets/implementing-telegram-oauth-in-typescript.png
+ogImage: https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/implementing-telegram-oauth-in-typescript.png
 description: The objective of this guide is to create a custom login button, distinct from the pre-built option provided by the Telegram script
 ---
 
