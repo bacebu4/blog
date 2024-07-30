@@ -1,7 +1,7 @@
 ---
 title: Node.js --experimental-specifier-resolution removed
 author: Vasilii Krasikov
-pubDatetime: 2023-09-16T05:17:19Z
+pubDatetime: 2024-07-30T05:17:19Z
 postSlug: node-experimental-specifier-resolution-removed
 featured: false
 draft: false
@@ -20,6 +20,8 @@ Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '...' is not supported reso
 ## TL;DR
 
 Use [this](https://github.com/nodejs/loaders-test/tree/main/commonjs-extension-resolution-loader) custom loader
+
+**UPD**: you may also want slightly to modify the provided loader to **not** use deprecated `--loader` flag but `--import` flag instead. More information about it [here](/posts/experimental-loader-may-be-removed-in-the-future)
 
 ## Table of contents
 
