@@ -7,7 +7,8 @@ featured: true
 draft: false
 tags:
   - testing
-description: "Automated Testing with Node.js and Gitlab"
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/automated-testing-with-nodejs-and-gitlab?raw=true
+description: "Learn how to set up a CI pipeline for testing Node.js applications in GitLab with test coverage, reporting, and visualization. Step-by-step guide for a robust CI setup."
 ---
 
 Continuous Integration (CI) is an essential part of modern software development. In this guide, we’ll walk through setting up a CI pipeline to test a Node.js application using these tools:
