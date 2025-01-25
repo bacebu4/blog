@@ -15,7 +15,7 @@ Continuous Integration (CI) is an essential part of modern software development.
 - [Node.js Test Runner](https://nodejs.org/api/test.html#test-runner)
 - Gitlab feature like [Test coverage visualization](https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization/index.html) and [Unit test reports](https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html)
 
-![test coverage visualization](https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/test-coverage-visualization.png)
+![test coverage visualization](https://github.com/bacebu4/blog/blob/master/cdn/test-coverage-visualization.png?raw=true)
 
 # Step 1: Write a Test
 
@@ -154,8 +154,8 @@ test:
 
 Overall, your Merge Request will look something like [this example](https://gitlab.com/bacebu4/cobertura-test/-/merge_requests/2). You’ll see test reports, coverage visualization, and other key details directly in the GitLab UI, making it easier to track the health of your codebase.
 
-![test coverage visualization](https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/test-coverage-visualization.png)
+![test coverage visualization](https://github.com/bacebu4/blog/blob/master/cdn/test-coverage-visualization.png?raw=true)
 
-![test coverage report](https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/test-coverage-report.png)
+![test coverage report](https://github.com/bacebu4/blog/blob/master/cdn/test-coverage-report.png?raw=true)
 
-![test coverage number](https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/test-coverage-number.png)
+![test coverage number](https://github.com/bacebu4/blog/blob/master/cdn/test-coverage-number.png?raw=true)
