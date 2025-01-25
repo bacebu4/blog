@@ -7,7 +7,6 @@ featured: true
 draft: false
 tags:
   - testing
-ogImage: https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/ddd-anti-patterns-manual-transaction-management.png
 description: "Automated Testing with Node.js and Gitlab"
 ---
 
