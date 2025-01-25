@@ -7,7 +7,7 @@ featured: true
 draft: false
 tags:
   - testing
-ogImage: https://github.com/bacebu4/blog/blob/master/cdn/automated-testing-with-nodejs-and-gitlab?raw=true
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/automated-testing-with-nodejs-and-gitlab.png?raw=true
 description: "Learn how to set up a CI pipeline for testing Node.js applications in GitLab with test coverage, reporting, and visualization. Step-by-step guide for a robust CI setup."
 ---
 
