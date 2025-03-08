@@ -10,7 +10,6 @@ import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
-import PostHogLayout from '../layouts/PostHogLayout.astro';
 
 const posts = await getCollection("blog");
 
@@ -20,7 +19,6 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
-<PostHogLayout>
 <Layout>
   <Header />
   <main id="main-content">
@@ -109,7 +107,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   <Footer />
 </Layout>
-</PostHogLayout>
 
 <style>
   /* ===== Hero Section ===== */
