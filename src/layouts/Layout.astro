@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@config";
 import "@styles/base.css";
+import PostHog from '../components/posthog.astro'
 
 export interface Props {
   title?: string;
@@ -68,6 +69,8 @@ const socialImageURL = new URL(
     <script defer src="/_vercel/insights/script.js"></script>
 
     <script is:inline src="/toggle-theme.js"></script>
+
+    <PostHog />
   </head>
   <body>
     <slot />
