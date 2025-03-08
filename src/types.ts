@@ -1,9 +1,3 @@
-declare global {
-  interface Window {
-    va: any;
-    vaq: any;
-  }
-}
 export type Site = {
   website: string;
   author: string;
