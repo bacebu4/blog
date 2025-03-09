@@ -7,7 +7,7 @@ featured: true
 draft: false
 tags:
   - ddd-anti-patterns
-ogImage: https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/ddd-anti-patterns-manual-transaction-management.png
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/ddd-anti-patterns-manual-transaction-management.png?raw=true
 description: "Using manual transaction management in service layer"
 ---
 

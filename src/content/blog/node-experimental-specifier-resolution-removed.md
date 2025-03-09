@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - docs
-ogImage: https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/node-experimental-specifier-resolution-removed.png
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/node-experimental-specifier-resolution-removed.png?raw=true
 description: Directory import '...' is not supported resolving ES modules imported from ...
 ---
 

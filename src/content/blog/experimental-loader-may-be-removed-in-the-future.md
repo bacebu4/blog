@@ -7,7 +7,7 @@ featured: false
 draft: false
 tags:
   - docs
-ogImage: https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/experimental-loader-may-be-removed-in-the-future.png
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/experimental-loader-may-be-removed-in-the-future?raw=true
 description: '...instead use `register()`: --import ''data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./loader.js", pathToFileURL("./"));'''
 ---
 

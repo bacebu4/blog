@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Vasilii Krasikov",
   desc: "Articles on TypeScript, Software Architecture and Design",
   title: "bacebu4",
-  ogImage: "https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/og.png",
+  ogImage: "https://github.com/bacebu4/blog/blob/master/cdn/og.png?raw=true",
   lightAndDarkMode: true,
   postPerPage: 4,
 };
