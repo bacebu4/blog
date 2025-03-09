@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "bacebu4",
   ogImage: "https://cdn.jsdelivr.net/gh/bacebu4/blog/cdn/og.png",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 4,
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
