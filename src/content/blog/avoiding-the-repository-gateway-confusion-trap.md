@@ -7,7 +7,7 @@ featured: false
 tags:
   - data access
 draft: false
-ogImage: https://github.com/bacebu4/blog/blob/master/cdn/avoiding-the-repository-gateway-confusion-trap?raw=true
+ogImage: https://github.com/bacebu4/blog/blob/master/cdn/avoiding-the-repository-gateway-confusion-trap.png?raw=true
 description: "Explore why this confusion happens, its consequences, and how to design clear, maintainable data access layers for each category."
 ---
 
