@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://bacebu4.com/",
   author: "Vasilii Krasikov",
-  desc: "Articles on TypeScript, Software Architecture and Design",
+  desc: "Articles on TypeScript, Software Design",
   title: "bacebu4",
   ogImage: "https://github.com/bacebu4/blog/blob/master/cdn/og.png?raw=true",
   lightAndDarkMode: true,

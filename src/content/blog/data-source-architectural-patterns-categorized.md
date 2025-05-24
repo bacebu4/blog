@@ -4,6 +4,8 @@ author: Vasilii Krasikov
 pubDatetime: 2025-03-05T10:15:11.135Z
 postSlug: data-source-architectural-patterns-categorized
 featured: false
+tags:
+  - data access
 draft: false
 ogImage: https://github.com/bacebu4/blog/blob/master/cdn/data-source-architectural-patterns-categorized.png?raw=true
 description: "Easy to follow categorization of Data Source Architectural Patterns"
