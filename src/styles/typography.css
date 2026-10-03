@@ -23,7 +23,8 @@
     ul,
     figcaption,
     table,
-    code {
+    code,
+    .katex-display {
       @apply text-foreground;
     }
 
@@ -45,6 +46,11 @@
 
     img {
       @apply border-border mx-auto border;
+    }
+
+    /* SVG diagrams have a white background; invert lightness, keep hues */
+    html[data-theme="dark"] & img[src*=".svg"] {
+      filter: invert(0.88) hue-rotate(180deg);
     }
 
     img[role="button"] {
@@ -85,8 +91,19 @@
       }
     }
 
-    code {
+    code,
+    .katex-display {
       @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+    }
+
+    /* Wide formulas scroll inside their box, not the page */
+    .katex-display {
+      @apply overflow-x-auto overflow-y-hidden;
+    }
+
+    /* KaTeX uses 1.21em; match the body text on phones. `!` beats the unlayered KaTeX CSS */
+    .katex {
+      @apply max-sm:text-[1em]!;
     }
 
     .astro-code code {

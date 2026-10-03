@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="758.0" height="260" viewBox="0 0 758.0 260" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13">
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#bbb" stroke-width="2"/></pattern></defs>
+<rect width="758.0" height="260" rx="8" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" fill="#222">Медленный вызов B: ретрай и хеджированный запрос</text>
+<line x1="170.0" y1="220" x2="698.0" y2="220" stroke="#666"/>
+<line x1="170.0" y1="70" x2="170.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="170.0" y="236" text-anchor="middle" fill="#666" font-size="11">0</text>
+<line x1="236.0" y1="70" x2="236.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="236.0" y="236" text-anchor="middle" fill="#666" font-size="11">20</text>
+<line x1="302.0" y1="70" x2="302.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="302.0" y="236" text-anchor="middle" fill="#666" font-size="11">40</text>
+<line x1="368.0" y1="70" x2="368.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="368.0" y="236" text-anchor="middle" fill="#666" font-size="11">60</text>
+<line x1="434.0" y1="70" x2="434.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="434.0" y="236" text-anchor="middle" fill="#666" font-size="11">80</text>
+<line x1="500.0" y1="70" x2="500.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="500.0" y="236" text-anchor="middle" fill="#666" font-size="11">100</text>
+<line x1="566.0" y1="70" x2="566.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="566.0" y="236" text-anchor="middle" fill="#666" font-size="11">120</text>
+<line x1="632.0" y1="70" x2="632.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="632.0" y="236" text-anchor="middle" fill="#666" font-size="11">140</text>
+<line x1="698.0" y1="70" x2="698.0" y2="220" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="698.0" y="236" text-anchor="middle" fill="#666" font-size="11">160</text>
+<text x="714.0" y="236" fill="#666" font-size="11">мс</text>
+<text x="158" y="107.0" text-anchor="end" fill="#222">Ретрай</text>
+<rect x="170.0" y="90" width="363.0" height="26" rx="3" fill="#F58518"/><text x="351.5" y="107.0" text-anchor="middle" fill="#fff" font-weight="600">вызов 1</text>
+<rect x="533.0" y="90" width="99.0" height="26" rx="3" fill="#F58518"/><text x="582.5" y="107.0" text-anchor="middle" fill="#fff" font-weight="600">вызов 2</text>
+<line x1="533.0" y1="70" x2="533.0" y2="116" stroke="#222" stroke-dasharray="4 3"/><text x="533.0" y="66" text-anchor="middle" fill="#222" font-size="12">таймаут 110 мс: отправить вызов 2</text>
+<text x="641.9" y="108" text-anchor="start" fill="#222" font-size="12">ответ в 140</text>
+<text x="158" y="177.0" text-anchor="end" fill="#222">Хедж. запрос</text>
+<rect x="170.0" y="160" width="264.0" height="26" rx="3" fill="#F58518" fill-opacity="0.12" stroke="#F58518" stroke-dasharray="4 3"/>
+<text x="259.1" y="178" text-anchor="middle" fill="#F58518" font-size="13">вызов 1</text>
+<line x1="348.2" y1="140" x2="348.2" y2="186" stroke="#222" stroke-dasharray="4 3"/><text x="348.2" y="136" text-anchor="end" fill="#222" font-size="12">p95 = 54 мс: отправить копию</text>
+<line x1="434.0" y1="140" x2="434.0" y2="216" stroke="#222" stroke-dasharray="4 3"/><text x="434.0" y="136" text-anchor="start" fill="#222" font-size="12">копия ответила: отменить вызов 1</text>
+<rect x="348.2" y="190" width="85.8" height="22" rx="3" fill="#F58518"/><text x="391.1" y="205.0" text-anchor="middle" fill="#fff" font-weight="600">копия</text>
+<text x="443.9" y="206" text-anchor="start" fill="#222" font-size="12">ответ в 80</text>
+</svg>

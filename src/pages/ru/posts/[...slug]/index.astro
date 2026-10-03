@@ -1,0 +1,10 @@
+---
+import PostDetails from "@/pages/posts/[...slug]/_components/PostDetails.astro";
+import { getPostStaticPaths } from "@/pages/posts/[...slug]/_components/getPostStaticPaths";
+
+export function getStaticPaths() {
+  return getPostStaticPaths("ru");
+}
+---
+
+<PostDetails {...Astro.props} />
