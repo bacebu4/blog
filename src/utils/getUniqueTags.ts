@@ -1,17 +1,28 @@
-import { slugifyStr } from "./slugify";
 import type { CollectionEntry } from "astro:content";
+import { postFilter } from "./postFilter";
+import { slugifyStr } from "./slugify";
 
-const getUniqueTags = (posts: CollectionEntry<"blog">[]) => {
-  const filteredPosts = posts.filter(({ data }) => !data.draft);
-  const tags: string[] = filteredPosts
-    .flatMap(post => post.data.tags)
-    .map(tag => slugifyStr(tag))
-    .filter(
-      (value: string, index: number, self: string[]) =>
-        self.indexOf(value) === index
-    )
-    .sort((tagA: string, tagB: string) => tagA.localeCompare(tagB));
-  return tags;
+type Tag = {
+  tag: string;
+  tagName: string;
 };
 
-export default getUniqueTags;
+/**
+ * Builds a de-duplicated, sorted tag list from posts.
+ *
+ * - Drafts and scheduled posts are excluded via `postFilter()`
+ * - `tag` is the slug used in URLs; `tagName` is the original label for display
+ * - Uniqueness is based on the slug (so differently-cased labels collapse)
+ */
+export function getUniqueTags(posts: CollectionEntry<"posts">[]) {
+  const tags: Tag[] = posts
+    .filter(postFilter)
+    .flatMap(post => post.data.tags)
+    .map(tag => ({ tag: slugifyStr(tag), tagName: tag }))
+    .filter(
+      (value, index, self) =>
+        self.findIndex(tag => tag.tag === value.tag) === index
+    )
+    .sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
+  return tags;
+}

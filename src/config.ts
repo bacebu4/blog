@@ -1,34 +1,41 @@
-import type { Site, SocialObjects } from "./types";
+/**
+ * Internal resolved configuration used throughout the codebase.
+ *
+ * Prefer editing `astro-paper.config.ts` instead of this file. This module exists to
+ * apply defaults and expose a fully-resolved config shape (`ResolvedAstroPaperConfig`).
+ */
+import userConfig from "@/astro-paper.config";
+import type { ResolvedAstroPaperConfig } from "./types/config";
+import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 
-export const SITE: Site = {
-  website: "https://bacebu4.com/",
-  author: "Vasilii Krasikov",
-  desc: "Articles on TypeScript, Software Design",
-  title: "bacebu4",
-  ogImage: "https://github.com/bacebu4/blog/blob/master/cdn/og.png?raw=true",
-  lightAndDarkMode: true,
-  postPerPage: 4,
+const DEFAULT_OG_IMAGE = "default-og.jpg";
+
+const config: ResolvedAstroPaperConfig = {
+  site: {
+    ...userConfig.site,
+    ogImage: userConfig.site.ogImage ?? DEFAULT_OG_IMAGE,
+    lang: userConfig.site.lang ?? "en",
+    timezone: userConfig.site.timezone ?? "UTC",
+    dir: userConfig.site.dir ?? "ltr",
+    googleVerification:
+      userConfig.site.googleVerification || PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  posts: {
+    perPage: userConfig.posts?.perPage ?? 4,
+    perIndex: userConfig.posts?.perIndex ?? 4,
+    scheduledPostMargin:
+      userConfig.posts?.scheduledPostMargin ?? 15 * 60 * 1000,
+  },
+  features: {
+    lightAndDarkMode: userConfig.features?.lightAndDarkMode ?? true,
+    dynamicOgImage: userConfig.features?.dynamicOgImage ?? true,
+    showArchives: userConfig.features?.showArchives ?? true,
+    showBackButton: userConfig.features?.showBackButton ?? true,
+    editPost: userConfig.features?.editPost ?? { enabled: false },
+    search: userConfig.features?.search ?? "pagefind",
+  },
+  socials: userConfig.socials ?? [],
+  shareLinks: userConfig.shareLinks ?? [],
 };
 
-export const LOCALE = ["en-EN"]; // set to [] to use the environment default
-
-export const SOCIALS: SocialObjects = [
-  {
-    name: "Github",
-    href: "https://github.com/bacebu4",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/bacebu4/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com/bacebu4",
-    linkTitle: `${SITE.title} on Twitter`,
-    active: true,
-  },
-];
+export default config;

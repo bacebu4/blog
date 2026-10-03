@@ -1,11 +1,18 @@
-import { slug as slugger } from "github-slugger";
-import type { BlogFrontmatter } from "@content/_schemas";
+import kebabcase from "lodash.kebabcase";
+import slugify from "slugify";
 
-export const slugifyStr = (str: string) => slugger(str);
+const hasNonLatin = (str: string): boolean => /[^\x00-\x7F]/.test(str);
 
-const slugify = (post: BlogFrontmatter) =>
-  post.postSlug ? slugger(post.postSlug) : slugger(post.title);
+/**
+ * Slugify a string using a hybrid approach:
+ * - Latin strings: slugify (e.g. "E2E Testing" → "e2e-testing")
+ * - Strings with non-Latin chars: lodash.kebabcase (preserves non-Latin chars)
+ */
+export const slugifyStr = (str: string): string => {
+  if (hasNonLatin(str)) {
+    return kebabcase(str);
+  }
+  return slugify(str, { lower: true });
+};
 
 export const slugifyAll = (arr: string[]) => arr.map(str => slugifyStr(str));
-
-export default slugify;
