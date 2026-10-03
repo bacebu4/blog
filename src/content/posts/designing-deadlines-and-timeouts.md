@@ -11,8 +11,6 @@ ogImage: https://github.com/bacebu4/blog/blob/master/cdn/designing-deadlines-and
 description: "Compute each call timeout from one request-wide deadline instead of splitting the latency budget into fixed timeouts"
 ---
 
-A request to our service fans out into calls to other services. Each of these calls needs a timeout, and the request as a whole has a latency requirement. This post shows how to set the call timeouts so that the request meets that requirement.
-
 Requirement: the client waits **at most 200 ms** for a response.
 
 A fixed timeout on every downstream call does not meet the requirement, because a fixed timeout bounds only one call. The fix is to **compute each call timeout at call time**, from the time left until one deadline that the whole request shares.
