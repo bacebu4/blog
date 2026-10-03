@@ -1,6 +1,8 @@
 import type { CollectionEntry } from "astro:content";
 import { postFilter } from "./postFilter";
 import { slugifyStr } from "./slugify";
+import { getPostLocale } from "./getPostPaths";
+import config from "@/config";
 
 type Tag = {
   tag: string;
@@ -17,6 +19,7 @@ type Tag = {
 export function getUniqueTags(posts: CollectionEntry<"posts">[]) {
   const tags: Tag[] = posts
     .filter(postFilter)
+    .filter(post => getPostLocale(post.filePath) === config.site.lang)
     .flatMap(post => post.data.tags)
     .map(tag => ({ tag: slugifyStr(tag), tagName: tag }))
     .filter(

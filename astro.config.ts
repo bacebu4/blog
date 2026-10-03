@@ -29,8 +29,10 @@ export default defineConfig({
     }),
   ],
   i18n: {
-    locales: ["en"],
+    locales: ["en", "ru"],
     defaultLocale: "en",
+    // Pages without a Russian version redirect to the English one
+    fallback: { ru: "en" },
     routing: {
       prefixDefaultLocale: false,
     },
@@ -67,6 +69,7 @@ export default defineConfig({
       fallbacks: ["monospace"],
       weights: [300, 400, 500, 600, 700],
       styles: ["normal", "italic"],
+      subsets: ["latin", "cyrillic"],
       formats: ["woff", "ttf"],
     },
   ],

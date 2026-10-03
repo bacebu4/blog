@@ -12,6 +12,9 @@ for (const [path, mod] of Object.entries(modules)) {
   translations[locale] = mod.default;
 }
 
+/** Locales that have UI strings in `./lang`. */
+export const locales = Object.keys(translations);
+
 /** Returns UI strings for the given locale, falling back to English. */
 export function useTranslations(locale: string = "en"): UIStrings {
   return translations[locale] ?? translations["en"];

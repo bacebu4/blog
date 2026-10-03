@@ -13,6 +13,20 @@ Personal blog built with [AstroPaper](https://github.com/satnaing/astro-paper) (
 - Posts: `src/content/posts/<slug>.md`. The frontmatter schema is in `src/content.config.ts`.
 - Images for posts: `cdn/`.
 - Markdown plugins (TOC, callouts, math with KaTeX): `astro.config.ts`.
+- UI strings per locale: `src/i18n/lang/<locale>.ts`.
+
+## Translations
+
+English is the default locale. Russian (`ru`) is the second locale.
+
+1. Put the translated post in `src/content/posts/ru/` with the same file name as the English post.
+2. The post is served at `/ru/posts/<slug>/` with the Russian UI. Posts with the same slug link to each other ("Read in English" / "Читать на русском").
+3. Keep the tag names in English, so the tags match the English posts.
+4. For images with text, make a translated copy named `cdn/<file>-ru.<ext>` and link it from the Russian post.
+
+English lists (home, posts, tags, RSS) show only English posts. Other `/ru/...` URLs redirect to the English page (`fallback` in `astro.config.ts`).
+
+To add a locale: add `src/i18n/lang/<locale>.ts`, add the locale to `i18n.locales` and `fallback` in `astro.config.ts`, add `src/pages/<locale>/posts/[...slug]/index.astro` (copy the `ru` one), and add the Day.js locale import in `src/components/Datetime.astro`.
 
 ## Images and other heavy files
 
@@ -31,7 +45,7 @@ Do not put post images in `public/` or `src/assets/`.
 Every post sets `ogImage` to a PNG in `cdn/`. If the post has no custom image, use the image that the build generates from the title:
 
 1. Run `npm run build` with no `ogImage` in the post frontmatter.
-2. Copy `dist/posts/<slug>/index.png` to `cdn/<slug>.png`.
+2. Copy `dist/posts/<slug>/index.png` to `cdn/<slug>.png`. For a Russian post, copy `dist/posts/ru/<slug>/index.png` to `cdn/<slug>-ru.png`.
 3. Set `ogImage: https://github.com/bacebu4/blog/blob/master/cdn/<slug>.png?raw=true` in the frontmatter.
 
 ### SVG diagrams
