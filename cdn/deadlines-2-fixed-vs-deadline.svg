@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880.0" height="270" viewBox="0 0 880.0 270" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13">
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#bbb" stroke-width="2"/></pattern></defs>
+<rect width="880.0" height="270" rx="8" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" fill="#222">Same latencies: a timeout from the deadline lets B succeed</text>
+<line x1="170.0" y1="230" x2="830.0" y2="230" stroke="#666"/>
+<line x1="170.0" y1="70" x2="170.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="170.0" y="246" text-anchor="middle" fill="#666" font-size="11">0</text>
+<line x1="236.0" y1="70" x2="236.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="236.0" y="246" text-anchor="middle" fill="#666" font-size="11">20</text>
+<line x1="302.0" y1="70" x2="302.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="302.0" y="246" text-anchor="middle" fill="#666" font-size="11">40</text>
+<line x1="368.0" y1="70" x2="368.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="368.0" y="246" text-anchor="middle" fill="#666" font-size="11">60</text>
+<line x1="434.0" y1="70" x2="434.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="434.0" y="246" text-anchor="middle" fill="#666" font-size="11">80</text>
+<line x1="500.0" y1="70" x2="500.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="500.0" y="246" text-anchor="middle" fill="#666" font-size="11">100</text>
+<line x1="566.0" y1="70" x2="566.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="566.0" y="246" text-anchor="middle" fill="#666" font-size="11">120</text>
+<line x1="632.0" y1="70" x2="632.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="632.0" y="246" text-anchor="middle" fill="#666" font-size="11">140</text>
+<line x1="698.0" y1="70" x2="698.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="698.0" y="246" text-anchor="middle" fill="#666" font-size="11">160</text>
+<line x1="764.0" y1="70" x2="764.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="764.0" y="246" text-anchor="middle" fill="#666" font-size="11">180</text>
+<line x1="830.0" y1="70" x2="830.0" y2="230" stroke="#ddd" stroke-dasharray="2 3"/>
+<text x="830.0" y="246" text-anchor="middle" fill="#666" font-size="11">200</text>
+<text x="846.0" y="246" fill="#666" font-size="11">ms</text>
+<line x1="830.0" y1="58" x2="830.0" y2="230" stroke="#D62728" stroke-width="2"/>
+<text x="830.0" y="54" text-anchor="middle" fill="#D62728" font-weight="600">deadline</text>
+<text x="158" y="97.0" text-anchor="end" fill="#222">Fixed split</text>
+<rect x="170.0" y="80" width="33.0" height="26" rx="3" fill="#4C78A8"/>
+<rect x="203.0" y="75" width="330.0" height="36" rx="4" fill="none" stroke="#D62728" stroke-width="2" stroke-dasharray="5 3"/><line x1="533.0" y1="70" x2="533.0" y2="116" stroke="#D62728" stroke-width="3"/>
+<rect x="203.0" y="80" width="330.0" height="26" rx="3" fill="#F58518"/><text x="368.0" y="97.0" text-anchor="middle" fill="#fff" font-weight="600">B needs 105</text>
+<g stroke="#D62728" stroke-width="3"><line x1="526.0" y1="86.0" x2="540.0" y2="100.0"/><line x1="526.0" y1="100.0" x2="540.0" y2="86.0"/></g>
+<text x="539.5999999999999" y="68" text-anchor="start" fill="#D62728" font-size="12">B's timeout: 100 ms → request fails</text>
+<rect x="559.4" y="80" width="270.59999999999997" height="26" rx="3" fill="url(#hatch)"/>
+<text x="694.6999999999999" y="126" text-anchor="middle" fill="#666" font-size="12">90 ms left, unused</text>
+<text x="158" y="177.0" text-anchor="end" fill="#222">Timeout from deadline</text>
+<rect x="170.0" y="160" width="33.0" height="26" rx="3" fill="#4C78A8"/>
+<rect x="203.0" y="155" width="363.0" height="36" rx="4" fill="none" stroke="#54A24B" stroke-width="2" stroke-dasharray="5 3"/><line x1="566.0" y1="150" x2="566.0" y2="196" stroke="#54A24B" stroke-width="3"/>
+<rect x="203.0" y="160" width="346.5" height="26" rx="3" fill="#F58518"/><text x="376.25" y="177.0" text-anchor="middle" fill="#fff" font-weight="600">B needs 105</text>
+<text x="572.5999999999999" y="148" text-anchor="start" fill="#54A24B" font-size="12">B's timeout: 110 ms → B succeeds</text>
+<rect x="549.5" y="160" width="82.5" height="26" rx="3" fill="#54A24B"/><text x="590.75" y="177.0" text-anchor="middle" fill="#fff" font-weight="600">C</text>
+<rect x="632.0" y="160" width="66.0" height="26" rx="3" fill="#8C8C8C"/>
+<text x="711.1999999999999" y="178" text-anchor="start" fill="#222" font-size="12">response at 160 ms</text>
+</svg>
