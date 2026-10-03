@@ -101,6 +101,11 @@
       @apply overflow-x-auto overflow-y-hidden;
     }
 
+    /* KaTeX uses 1.21em; match the body text on phones. `!` beats the unlayered KaTeX CSS */
+    .katex {
+      @apply max-sm:text-[1em]!;
+    }
+
     .astro-code code {
       @apply flex-[1_0_100%] bg-inherit p-0;
     }
