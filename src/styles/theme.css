@@ -4,31 +4,35 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-link: var(--link);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-ibm-plex-mono);
+  --font-app: var(--font-lora);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
-/* Light theme values */
+/* Neutral greys with an amber accent and blue links */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #ffffff;
+  --foreground: #222222;
+  --accent: #b68235;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --link: #3f6288;
+  --muted: #f6f6f6;
+  --muted-foreground: #5c5c5c;
+  --border: #e0e0e0;
 }
 
-/* Dark theme values */
+/* The plugin has no dark link colour: #3f6288 is too dark on #1e1e1e */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #1e1e1e;
+  --foreground: #dadada;
+  --accent: #e1ad66;
+  --accent-foreground: #1e1e1e;
+  --link: #8aa9cc;
+  --muted: #262626;
+  --muted-foreground: #b3b3b3;
+  --border: #363636;
 }

@@ -29,7 +29,7 @@
     }
 
     a {
-      @apply text-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
+      @apply text-link wrap-break-word underline-offset-4 hover:opacity-75 focus-visible:no-underline;
     }
 
     ul {
@@ -37,7 +37,24 @@
     }
 
     li {
-      @apply marker:text-accent;
+      @apply marker:text-muted-foreground;
+    }
+
+    /* Bullets by depth: ● ○ ◆, then ● again */
+    ul ul {
+      list-style-type: circle;
+    }
+    ul ul ul {
+      list-style-type: "◆  ";
+    }
+    ul ul ul > li::marker {
+      font-size: 0.7em;
+    }
+    ul ul ul ul {
+      list-style-type: disc;
+    }
+    ul ul ul ul > li::marker {
+      font-size: inherit;
     }
 
     hr {
@@ -66,13 +83,14 @@
     }
 
     table {
+      /* `!` beats the cell padding of prose-lg (utilities layer) */
       th,
       td {
-        @apply border-border border p-2;
+        @apply border-border border p-2!;
       }
 
       th {
-        @apply py-1.5;
+        @apply py-1.5!;
       }
 
       th[align="center"],
@@ -93,7 +111,15 @@
 
     code,
     .katex-display {
-      @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+      @apply bg-muted text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+    }
+
+    /* Inline code: red on grey with a hairline border */
+    :not(pre) > code {
+      @apply rounded-[2px] border px-[0.2em] py-[0.05em] text-[0.82em] font-normal;
+    }
+    html[data-theme="light"] & :not(pre) > code {
+      @apply border-[#d7d3d3] bg-[#eae7e7] text-[#b03a2e];
     }
 
     /* Wide formulas scroll inside their box, not the page */

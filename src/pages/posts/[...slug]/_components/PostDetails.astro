@@ -85,7 +85,7 @@ const ogImage = ogImageUrl
   >
     <h1
       style={{ viewTransitionName: toTransitionName(post.id) }}
-      class="text-accent inline-block text-2xl font-bold sm:text-3xl"
+      class="inline-block text-3xl font-bold sm:text-4xl"
     >
       {title}
     </h1>
@@ -109,7 +109,7 @@ const ogImage = ogImageUrl
         <a
           href={translation.url}
           hreflang={translation.locale}
-          class="text-accent underline decoration-dashed underline-offset-4 hover:opacity-75"
+          class="text-link underline underline-offset-4 hover:opacity-75"
         >
           {useTranslations(translation.locale).post.readInLanguage}
         </a>
@@ -120,7 +120,7 @@ const ogImage = ogImageUrl
       id="article"
       class:list={[
         "mt-8 w-full",
-        "app-prose max-w-app",
+        "app-prose prose-lg max-w-app",
         "prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)",
       ]}
     >

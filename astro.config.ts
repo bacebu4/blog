@@ -63,6 +63,15 @@ export default defineConfig({
   },
   fonts: [
     {
+      name: "Lora",
+      cssVariable: "--font-lora",
+      provider: fontProviders.google(),
+      fallbacks: ["system-ui", "sans-serif"],
+      weights: ["400 700"],
+      styles: ["normal", "italic"],
+      subsets: ["latin", "cyrillic"],
+    },
+    {
       name: "IBM Plex Mono",
       cssVariable: "--font-ibm-plex-mono",
       provider: fontProviders.google(),
