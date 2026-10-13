@@ -83,13 +83,14 @@
     }
 
     table {
+      /* `!` beats the cell padding of prose-lg (utilities layer) */
       th,
       td {
-        @apply border-border border p-2;
+        @apply border-border border p-2!;
       }
 
       th {
-        @apply py-1.5;
+        @apply py-1.5!;
       }
 
       th[align="center"],
