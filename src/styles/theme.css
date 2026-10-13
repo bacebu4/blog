@@ -12,8 +12,7 @@
   --font-mono: var(--font-ibm-plex-mono);
 }
 
-/* Colours from the slog Obsidian plugin (slog/obsidian-plugin/styles.css) on
-   top of Obsidian's default theme */
+/* Amber accent and blue links on top of Obsidian's default theme */
 :root,
 [data-theme="light"] {
   --background: #ffffff;

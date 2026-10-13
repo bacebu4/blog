@@ -40,7 +40,7 @@
       @apply marker:text-muted-foreground;
     }
 
-    /* Bullets by depth like the slog plugin: ● ○ ◆, then ● again */
+    /* Bullets by depth: ● ○ ◆, then ● again */
     ul ul {
       list-style-type: circle;
     }
@@ -114,7 +114,7 @@
       @apply bg-muted text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
     }
 
-    /* Inline code like the slog plugin: red on grey with a hairline border */
+    /* Inline code: red on grey with a hairline border */
     :not(pre) > code {
       @apply rounded-[2px] border px-[0.2em] py-[0.05em] text-[0.82em] font-normal;
     }
