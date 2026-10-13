@@ -47,9 +47,10 @@ const rssHref = getRelativeLocaleUrl(
 
     <!-- Font -->
     <Font
-      cssVariable="--font-ibm-plex-mono"
-      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+      cssVariable="--font-lora"
+      preload={[{ subset: "latin", weight: "400 700", style: "normal" }]}
     />
+    <Font cssVariable="--font-ibm-plex-mono" />
 
     <!-- Primary meta -->
     <title>{title}</title>
@@ -119,7 +120,7 @@ const rssHref = getRelativeLocaleUrl(
     <PostHog />
   </head>
   <body
-    class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
+    class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col font-[450] sm:font-normal"
   >
     <slot />
     <script>
