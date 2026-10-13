@@ -12,7 +12,7 @@
   --font-mono: var(--font-ibm-plex-mono);
 }
 
-/* Amber accent and blue links on top of Obsidian's default theme */
+/* Neutral greys with an amber accent and blue links */
 :root,
 [data-theme="light"] {
   --background: #ffffff;
